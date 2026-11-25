@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Central de suporte do Molt, aplicativo de fotografia analógica para iPhone.">
+  <title>Suporte | Molt</title>
+
+  <style>
+    :root {
+      --background: #F7F4EE;
+      --text: #29251F;
+      --secondary: #736B60;
+      --accent: #8C6B50;
+      --border: #DDD6CB;
+      --highlight: #EEE8DE;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", sans-serif;
+      line-height: 1.8;
+    }
+
+    header {
+      padding: 36px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-content {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .subtitle {
+      color: var(--secondary);
+      font-size: 13px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 5vw, 46px);
+      line-height: 1.2;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      color: var(--secondary);
+      font-size: 17px;
+      margin-bottom: 48px;
+    }
+
+    section {
+      margin-bottom: 45px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 0 0 16px;
+      font-size: 16px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .contact-box {
+      background: var(--highlight);
+      padding: 28px;
+      border-radius: 8px;
+      margin-bottom: 50px;
+    }
+
+    .contact-box h2 {
+      margin-top: 0;
+    }
+
+    .contact-button {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 12px 22px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .contact-button:hover {
+      opacity: 0.9;
+    }
+
+    .faq-item {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--secondary);
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 24px;
+      }
+
+      main {
+        padding: 40px 24px 70px;
+      }
+
+      .contact-box {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-content">
+      <a class="logo" href="../marketing-molt/">
+        molt.
+      </a>
+      <div class="subtitle">
+        Fotografia por outro ângulo
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <h1>Suporte do Molt</h1>
+
+    <p class="intro">
+      Precisa de ajuda com o Molt?
+      Aqui você encontra respostas para as
+      principais dúvidas sobre o aplicativo
+      e informações para entrar em contato.
+    </p>
+
+    <div class="contact-box">
+      <h2>Entre em contato</h2>
+
+      <p>
+        Encontrou algum problema, tem alguma dúvida
+        ou gostaria de enviar uma sugestão?
+        Nossa equipe está disponível para ajudar.
+      </p>
+
+      <p>
+        Entre em contato pelo nosso e-mail oficial
+        de suporte.
+      </p>
+
+      <a
+        class="contact-button"
+        href="mailto:SEUEMAIL@GMAIL.COM">
+        Enviar e-mail
+      </a>
+    </div>
+
+    <section>
+      <h2>Perguntas frequentes</h2>
+
+      <div class="faq-item">
+        <h3>Como começo a fotografar?</h3>
+        <p>
+          Ao abrir o Molt, você encontrará uma mesa
+          com um filme fotográfico. Arraste o filme
+          para dentro da câmera para começar
+          sua experiência.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Quantas fotos posso tirar?</h3>
+        <p>
+          Cada filme permite registrar até
+          24 fotografias, trazendo para o celular
+          a experiência de fotografar com
+          uma câmera analógica.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Quando recebo um novo filme?</h3>
+        <p>
+          Novos filmes ficam disponíveis
+          semanalmente, contando a partir da
+          primeira fotografia do filme anterior.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Como funciona a revelação?</h3>
+        <p>
+          No Molt, a experiência continua
+          depois de fotografar. Você participa
+          de etapas interativas inspiradas
+          no processo de revelação analógica
+          antes de visualizar as fotografias.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Onde minhas fotografias ficam salvas?</h3>
+        <p>
+          As fotografias são armazenadas
+          localmente na biblioteca de fotos
+          do seu iPhone e podem ser
+          visualizadas no álbum do Molt.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>O Molt coleta meus dados pessoais?</h3>
+        <p>
+          Não. O Molt utiliza os recursos nativos
+          do iPhone e não coleta dados pessoais
+          nem envia fotografias para
+          servidores próprios.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>O que acontece se eu apagar uma foto?</h3>
+        <p>
+          Se uma fotografia for excluída da
+          biblioteca de fotos do iPhone,
+          ela também deixará de aparecer
+          no álbum do Molt.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Preciso pagar para usar o Molt?</h3>
+        <p>
+          Não. O Molt é gratuito e não possui
+          compras ou assinaturas dentro
+          do aplicativo.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Privacidade e licenças</h2>
+
+      <p>
+        Para saber mais sobre como o Molt
+        utiliza os recursos do iPhone, consulte
+        nossa
+        <a href="../politica-de-privacidade-molt/">
+          Política de Privacidade
+        </a>.
+      </p>
+
+      <p>
+        Para consultar os autores e as licenças
+        dos recursos utilizados no aplicativo,
+        acesse
+        <a href="../creditos-molt/">
+          Créditos e Licenças
+        </a>.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="../marketing-molt/">Sobre o Molt</a>
+      <a href="../politica-de-privacidade-molt/">
+        Privacidade
+      </a>
+      <a href="../creditos-molt/">
+        Créditos
+      </a>
+    </div>
+
+    © 2026 Molt. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>

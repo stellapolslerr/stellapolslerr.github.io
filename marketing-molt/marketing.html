@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Molt — Fotografia por outro ângulo. Uma experiência de fotografia analógica no iPhone: coloque o filme na câmera, registre até 24 fotos e participe da revelação.">
+  <meta name="theme-color" content="#f7f4ee">
+  <title>Molt — Fotografia por outro ângulo</title>
+  <style>
+    :root{--bg:#f7f4ee;--paper:#fffdf9;--ink:#29251f;--muted:#736b60;--accent:#8c6b50;--edge:#ded7ca;--sand:#eee8de;--dark:#312b26}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+    .wrap{width:min(1080px,calc(100% - 48px));margin:auto}
+    header{border-bottom:1px solid var(--edge);background:rgba(247,244,238,.95)}
+    .navbar{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-size:35px;font-weight:750;letter-spacing:-2px;line-height:1}.brand span{color:var(--accent)}
+    nav{display:flex;align-items:center;gap:24px;flex-wrap:wrap}nav a{font-size:13px;color:var(--muted)}nav a:hover,.footlinks a:hover{text-decoration:underline;text-underline-offset:4px}
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:56px;padding:88px 0 100px}
+    .eyebrow{text-transform:uppercase;font-size:11px;letter-spacing:2.4px;font-weight:700;color:var(--accent)}
+    h1{font-size:clamp(43px,6vw,76px);letter-spacing:-3px;line-height:1.06;font-weight:650;margin:21px 0 24px}
+    .hero p{max-width:540px;font-size:18px;color:var(--muted);line-height:1.8;margin-bottom:32px}
+    .button{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--dark);border-radius:5px;padding:12px 21px;font-weight:600;font-size:14px;background:var(--dark);color:#fffdf9;transition:transform .15s,background .15s}
+    .button:hover{transform:translateY(-2px);background:#4b3d32}.button.secondary{background:transparent;color:var(--dark);border-color:var(--edge);margin-left:8px}.button.secondary:hover{background:var(--sand)}
+    .scene{min-height:420px;border:1px solid #dbd2c5;background:radial-gradient(ellipse at 70% 35%,#f9f4e9,#e6d9c6 85%);border-radius:10px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .scene:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(93deg,transparent 0 34px,rgba(75,58,42,.018) 35px 36px);pointer-events:none}
+    .camera{width:255px;height:172px;border-radius:17px 17px 24px 24px;position:relative;box-shadow:0 25px 40px #54402e38, inset 0 0 0 5px #625346;background:linear-gradient(145deg,#746457,#3c3129);transform:rotate(-8deg);display:flex;align-items:center;justify-content:center}
+    .camera:before{content:"";position:absolute;top:-19px;left:42px;width:92px;height:23px;background:#504237;border-radius:8px 8px 0 0;box-shadow:inset 0 3px #998775}
+    .camera:after{content:"";position:absolute;top:22px;right:22px;width:28px;height:10px;border-radius:7px;background:#c7b395}
+    .lens{width:128px;height:128px;background:radial-gradient(circle,#1d201f 0 20%,#3b4647 21% 33%,#1c1f1d 34% 47%,#9e8d72 48% 52%,#2b2621 53% 69%,#a59274 70% 73%,#28221e 74%);border-radius:50%;box-shadow:0 4px 9px #1a1413aa, inset 0 0 9px #0009}
+    .flash{position:absolute;left:20px;top:24px;width:33px;height:21px;border-radius:4px;background:#d7c6a5;border:4px solid #302821}
+    .frame-label{position:absolute;bottom:24px;left:28px;color:#63564b;letter-spacing:1.7px;font-size:10px;text-transform:uppercase}
+    .section{padding:76px 0;border-top:1px solid var(--edge)}h2{font-size:clamp(30px,4vw,47px);line-height:1.13;letter-spacing:-1.5px;margin:15px 0 18px;font-weight:650}.intro{max-width:680px;color:var(--muted);font-size:17px;margin:0 0 35px}
+    .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.step{padding:28px 26px 31px;border:1px solid var(--edge);border-radius:9px;background:var(--paper)}.num{font-size:12px;letter-spacing:2px;color:var(--accent);font-weight:800}.step h3{font-size:21px;letter-spacing:-.5px;margin:21px 0 8px}.step p{font-size:15px;color:var(--muted);margin:0}
+    .feature{background:var(--sand);border-radius:10px;padding:55px 58px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px}.feature h2{margin-top:12px}.feature p{color:var(--muted);font-size:17px}.film{width:min(100%,360px);margin:auto;background:#3f342a;border-radius:4px;padding:16px 20px;box-shadow:0 18px 28px #55422d28;transform:rotate(4deg)}.holes{height:18px;background:repeating-linear-gradient(90deg,#ddc7a6 0 13px,transparent 13px 31px);background-size:31px 100%;opacity:.9}.negative{height:180px;background:linear-gradient(140deg,#8e8065,#c8b39a 43%,#786c5a);border:8px solid #231e19;display:grid;place-items:center}.negative span{font-size:68px;color:#ebdbc4;opacity:.75;font-family:Georgia,serif;font-style:italic}
+    .end{padding:85px 0 110px;text-align:center}.end h2{max-width:680px;margin:16px auto 18px}.end p{color:var(--muted);max-width:650px;margin:0 auto 30px;font-size:17px}
+    footer{background:#302a25;color:#e9e1d6;padding:30px 0}.foot{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot small{color:#bbb0a3}.footlinks{display:flex;gap:21px;flex-wrap:wrap}.footlinks a{font-size:13px;color:#e9e1d6}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:62px 0}.scene{min-height:320px}.steps{grid-template-columns:1fr}.feature{grid-template-columns:1fr;padding:36px 27px}.film{max-width:290px}nav{gap:12px}}
+    @media(max-width:500px){.wrap{width:min(100% - 32px,1080px)}nav{gap:10px}nav a{font-size:12px}.navbar{min-height:75px}.brand{font-size:30px}.hero p{font-size:16px}h1{letter-spacing:-2px}.button.secondary{margin-left:0;margin-top:10px}.hero-actions{display:flex;flex-direction:column;align-items:flex-start}.scene{min-height:300px}.camera{transform:scale(.85) rotate(-8deg)}.section{padding:55px 0}.end{padding:65px 0 80px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.button:hover{transform:none}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap navbar"><a class="brand" href="#inicio" aria-label="Molt, voltar ao início">molt<span>.</span></a><nav aria-label="Navegação"><a href="#experiencia">A experiência</a><a href="#revelacao">Revelação</a><a href="https://stellapolslerr.github.io/suporte-molt/">Suporte</a></nav></div></header>
+  <main id="inicio">
+    <div class="wrap hero"><div><div class="eyebrow">Molt · Fotografia por outro ângulo</div><h1>O clique é só o começo.</h1><p>Uma experiência de fotografia inspirada no universo analógico, feita para transformar o ato de registrar momentos em algo que vai além da imagem final.</p><div class="hero-actions"><a href="#experiencia" class="button">Conheça a experiência</a><a href="#revelacao" class="button secondary">Descubra a revelação</a></div></div><div class="scene" role="img" aria-label="Ilustração estilizada de uma câmera analógica"><div class="camera"><div class="flash"></div><div class="lens"></div></div><span class="frame-label">24 exposições · 1 filme</span></div></div>
+    <section class="section" id="experiencia"><div class="wrap"><div class="eyebrow">Da mesa à câmera</div><h2>Uma maneira diferente de fotografar.</h2><p class="intro">No Molt, cada etapa faz parte da experiência. Você prepara o filme, registra momentos e acompanha o processo até poder rever suas fotografias.</p><div class="steps"><article class="step"><span class="num">01 / PREPARE</span><h3>Insira o filme</h3><p>Tudo começa em uma mesa. Arraste o filme para dentro da câmera para começar a fotografar.</p></article><article class="step"><span class="num">02 / FOTOGRAFE</span><h3>24 fotografias</h3><p>A câmera se inspira nos modelos analógicos e permite registrar até 24 fotografias por filme.</p></article><article class="step"><span class="num">03 / REVELE</span><h3>Participe da revelação</h3><p>O processo continua depois do clique: interaja com as etapas de revelação e acompanhe a experiência até o álbum.</p></article></div></div></section>
+    <section class="section" id="revelacao"><div class="wrap"><div class="feature"><div><div class="eyebrow">Mais que a foto final</div><h2>A espera também faz parte.</h2><p>O Molt resgata um pouco da expectativa da fotografia analógica. Um novo filme fica disponível a cada semana, contando a partir da primeira foto do filme anterior.</p><p>Ao final da experiência, as imagens podem ser vistas no álbum do aplicativo e permanecem armazenadas localmente no iPhone.</p></div><div class="film" role="img" aria-label="Ilustração de um negativo fotográfico"><div class="holes"></div><div class="negative"><span>m.</span></div><div class="holes"></div></div></div></div></section>
+    <div class="wrap end"><div class="eyebrow">Molt para iPhone</div><h2>Fotografia por outro ângulo.</h2><p>Uma câmera, um filme e uma experiência que valoriza todo o caminho entre fotografar e revelar.</p><a class="button" href="https://stellapolslerr.github.io/suporte-molt/">Entre em contato</a></div>
+  </main>
+  <footer><div class="wrap foot"><div><strong>molt.</strong> <small>© 2026 Molt</small></div><div class="footlinks"><a href="https://stellapolslerr.github.io/politica-de-privacidade-molt/">Política de Privacidade</a><a href="https://stellapolslerr.github.io/creditos-molt/">Créditos e Licenças</a><a href="https://stellapolslerr.github.io/suporte-molt/">Suporte</a></div></div></footer>
+</body>
+</html>
