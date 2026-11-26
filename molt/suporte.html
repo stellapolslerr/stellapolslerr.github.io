@@ -223,12 +223,18 @@
 
    <p>
     Para dúvidas, sugestões ou problemas com o aplicativo,
-    entre em contato pelo nosso e-mail de suporte:<p>
-    Para dúvidas, sugestões ou problemas com o aplicativo,
     entre em contato pelo nosso e-mail de suporte:
 </p>
 
-<p><strong>suportemolt@gmail.com</strong></p>
+<p>
+    <a href="#" onclick="event.preventDefault(); navigator.clipboard.writeText('suportemolt@gmail.com').then(() => document.getElementById('copy-message').textContent = 'E-mail copiado!')">
+        suportemolt@gmail.com
+    </a>
+</p>
+
+<p id="copy-message" style="font-size: 13px;">
+    Clique no e-mail para copiar.
+</p>
 </div>
 
     <section>
