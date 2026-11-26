@@ -7,7 +7,6 @@
   <meta name="description" content="Central de suporte do Molt, aplicativo de fotografia analógica para iPhone.">
   <title>Suporte | Molt</title>
 
-</section>
   <style>
     :root {
       --background: #F7F4EE;
@@ -60,7 +59,7 @@
     main {
       max-width: 800px;
       margin: 0 auto;
-      padding: 60px 24px 100px;
+      padding: 60px 24px 48px;
     }
 
     h1 {
@@ -125,6 +124,11 @@
       margin-top: 10px;
     }
 
+    .contact-alternative {
+      margin: 16px 0 0;
+      font-size: 14px;
+    }
+
     .contact-button:hover {
       opacity: 0.9;
     }
@@ -134,20 +138,44 @@
       border-bottom: 1px solid var(--border);
     }
 
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 24px;
-      text-align: center;
-      color: var(--secondary);
-      font-size: 13px;
+    main > section:last-child {
+      margin-bottom: 0;
     }
 
-    .footer-links {
+    footer {
+      background: #302a25;
+      color: #e9e1d6;
+      padding: 30px 0;
+      line-height: 1.6;
+    }
+
+    .foot {
+      width: min(100% - 48px, 1080px);
+      margin: 0 auto;
       display: flex;
-      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
-      margin-bottom: 12px;
+    }
+
+    .foot small { color: #bbb0a3; }
+
+    .footlinks {
+      display: flex;
+      gap: 21px;
+      flex-wrap: wrap;
+    }
+
+    .footlinks a {
+      font-size: 13px;
+      color: #e9e1d6;
+      text-decoration: none;
+    }
+
+    .footlinks a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
     }
 
     @media (max-width: 600px) {
@@ -156,7 +184,7 @@
       }
 
       main {
-        padding: 40px 24px 70px;
+        padding: 40px 24px 32px;
       }
 
       .contact-box {
@@ -201,14 +229,20 @@
 
       <p>
         Entre em contato pelo nosso e-mail oficial
-        de suporte.
+        de suporte: <a href="mailto:suportemolt@gmail.com">suportemolt@gmail.com</a>.
       </p>
 
       <a
         class="contact-button"
-        href="mailto:suportemolt@gmail.com">
+        href="mailto:suportemolt@gmail.com?subject=Suporte%20Molt">
         Enviar e-mail
       </a>
+
+      <p class="contact-alternative">
+        Se o botão não abrir seu aplicativo de e-mail,
+        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=suportemolt%40gmail.com&amp;su=Suporte%20Molt" target="_blank" rel="noopener noreferrer">abra pelo Gmail</a>
+        ou copie o endereço acima.
+      </p>
     </div>
 
     <section>
@@ -294,42 +328,17 @@
       </div>
     </section>
 
-    <section>
-      <h2>Privacidade e licenças</h2>
-
-      <p>
-        Para saber mais sobre como o Molt
-        utiliza os recursos do iPhone, consulte
-        nossa
-        <a href="./politica-de-privacidade.html">
-          Política de Privacidade
-        </a>.
-      </p>
-
-      <p>
-        Para consultar os autores e as licenças
-        dos recursos utilizados no aplicativo,
-        acesse
-        <a href="./creditos.html">
-          Créditos e Licenças
-        </a>.
-      </p>
-    </section>
-
   </main>
 
   <footer>
-    <div class="footer-links">
-      <a href="./marketing.html">Sobre o Molt</a>
-      <a href="./politica-de-privacidade.html">
-        Privacidade
-      </a>
-      <a href="./creditos.html">
-        Créditos
-      </a>
+    <div class="foot">
+      <div><strong>Molt</strong> <small>© 2026 Molt</small></div>
+      <nav class="footlinks" aria-label="Links do rodapé">
+        <a href="./marketing.html">Sobre o Molt</a>
+        <a href="./politica-de-privacidade.html">Política de Privacidade</a>
+        <a href="./creditos.html">Créditos e Licenças</a>
+      </nav>
     </div>
-
-    © 2026 Molt. Todos os direitos reservados.
   </footer>
 
 </body>
